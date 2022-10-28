@@ -29,10 +29,13 @@ app.get('/', (req, resp)=>{
     resp.send(`<h1>The current Timer is ${new Date()}</h1>
         <h3>How are you, Bro</h3>
         <button src="www.google.com">OK</button>
+        <img src="/static/1.jpg">
 
     `)
 
 })
+//Serve static photo
+app.use("/static", express.static(__dirname+"/static"))
 
 
 //start our web application
